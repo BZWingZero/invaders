@@ -1,0 +1,26 @@
+body {
+	background-color: black;
+	font-family: arial;
+}
+
+.canvas-container {
+	margin-left: auto;
+	margin-right: auto;
+	border:1px solid #333;
+	width: 940px;
+	height: 600px;
+}
+
+.subcanvas {
+	position:absolute;
+}
+
+h2 {
+	color: #ddd;
+	text-align: center;
+}
+
+.controls {
+	margin-left:25%;
+	color: #ddd;
+}

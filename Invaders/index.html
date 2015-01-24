@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	
+	<title>Invaders!</title>
+	<!--link rel="shortcut icon" href="favicon.ico" /-->
+
+	<link rel="stylesheet" href="css/style.css"> <!-- Game Stylesheet -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> <!-- Jquery -->
+	<script src="js/main.js"></script> <!-- Game Script -->
+</head>
+<body>
+
+<h2>Save the Call Center from the inbound calls!</h2>
+<div class="canvas-container">
+	<canvas id="background" class="subcanvas" width="940" height="600"></canvas> 
+	<canvas id="canvas" class="subcanvas" width="940" height="600"></canvas> 
+</div>
+
+<div>
+	<ul class="controls"><strong style="text-decoration:underline">Controls</strong>
+		<li>Move: Left &amp; Right arrows</li>
+		<li>Shoot: Spacebar</li>
+	</ul>
+</div>
+
+<audio preload="auto" src="res/laser.wav" id="laser"></audio>
+<audio preload="auto" src="res/explosion.wav" id="explosion"></audio>
+<audio preload="auto" src="res/gameOver.wav" id="gameOver"></audio>
+
+
+</body>
+</html>

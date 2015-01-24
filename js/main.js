@@ -56,45 +56,49 @@ $(document).ready(function(){
 		}
 	}
 	$(document).keydown(function(e) {
-		switch(e.which) {
-			case 37: {// left
-				if(handsetX>0) {
-					handsetX_old = handsetX;
-					handsetX-=handset_speed;
+		if(gameOver){
+			switch(e.which) {
+				case 37: {// left
+					if(handsetX>0) {
+						handsetX_old = handsetX;
+						handsetX-=handset_speed;
+					}
+					break;
 				}
-				break;
-			}
 
-			case 38: // up
-				break;
+				case 38: // up
+					break;
 
-			case 39: {// right
-				if(handsetX < canvas[0].width-32){
-					handsetX_old = handsetX;
-					handsetX+=handset_speed;
+				case 39: {// right
+					if(handsetX < canvas[0].width-32){
+						handsetX_old = handsetX;
+						handsetX+=handset_speed;
+					}
+					break;
 				}
-				break;
-			}
 
-			case 40: // down
-				break;
+				case 40: // down
+					break;
 
-			case 32: { // space
-				if(laser.length < 3 ) {
-					laser.push({
-						xPos: handsetX+16,
-						yPos: 550,
-						color: '#8cc63f',
-						speed: -5,
-					});
-					var lzrAudio = document.getElementById('laser');
-					lzrAudio.currentTime = 0;
-					lzrAudio.play();
+				case 32: { // space
+					if(laser.length < 3 ) {
+						laser.push({
+							xPos: handsetX+16,
+							yPos: 550,
+							color: '#8cc63f',
+							speed: -5,
+						});
+						var lzrAudio = document.getElementById('laser');
+						lzrAudio.currentTime = 0;
+						lzrAudio.play();
+					}
+					break;
 				}
-				break;
-			}
 
-		default: return; // exit this handler for other keys
+			default: return; // exit this handler for other keys
+			}
+		} else {
+			return;
 		}
 	e.preventDefault(); // prevent the default action (scroll / move caret)
 	});
